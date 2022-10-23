@@ -18,7 +18,7 @@ Math.PI
 ==  --> sravnenije znachenija
 ===  --> sravnenije zna4 i tipa
 &&  --> and
-2 vertikalnije poloski  --> or
+2 vertikalnije poloski || --> or
 console.log(age, typeof age);
 */
 
@@ -32,6 +32,14 @@ if (isOfAge) {
     console.log("Welcome to the club");
 } else {
     console.log("Go home");
+}
+
+var hp = 0;
+var dead = hp === 0;
+var one = 1;
+var otdelnoi = isOfAge || one;
+if (dead && otdelnoi) {
+    console.log("Game over");
 }
 
 var hp = 0;
