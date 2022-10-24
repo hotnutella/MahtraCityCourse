@@ -10,3 +10,5 @@ if (age >= 18){
   } else {
     console.log(name + 'YOU SUCK ');
   }
+
+  
