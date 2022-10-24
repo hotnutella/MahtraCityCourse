@@ -11,12 +11,12 @@ while (i <= 3) {
 
 
 var znachenie1 = 1;
-var znachenie2 = 1;
-var resultRow = '';
 var end = 10;
 while (znachenie1 <= end) {
+  var resultRow = '';
+  var znachenie2 = 1;
   while (znachenie2 <= end) {
-    resultRow += znachenie1 * znachenie2;
+    resultRow += '  ' + znachenie1 * znachenie2;
     znachenie2++;
   }
   console.log(resultRow);
