@@ -2,6 +2,7 @@ var prompt = require("prompt-sync")();
 var price1 = 0;
 var price2 = 10.90;
 var forma = "";
+var forma2= "";
 var privetstvie = "Welcome to our party!If You buy more than 5 tickets you'll get a discount";
 console.log(privetstvie);
 var quantity1 = prompt("How many tickets under age 11? ");
@@ -13,16 +14,18 @@ var priceresult = A + B;
 var priceresult2 = 0;
 if (totalquantity > 1) {
     forma = "are";
+    forma2 = "s.";
 }else if  (totalquantity == 1){
     forma = "is";
+    forma2 = ".";
 }
 if (totalquantity >= 5) {
     priceresult2 = priceresult * 0.7;
-    console.log("Here " + forma + " your tickets. It will cost: " + priceresult2);
+    console.log("Here " + forma + " your ticket" + forma2 + " It will cost: " + priceresult2);
 
 } else if (totalquantity == 0) {
     console.log("Have a nice day");
 }
 else {
-console.log("Here " + forma + " your tickets. It will cost: " + priceresult);
+console.log("Here " + forma + " your ticket" + forma2 + " It will cost: " + priceresult);
 };
