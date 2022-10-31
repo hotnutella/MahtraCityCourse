@@ -1,6 +1,48 @@
 var prompt = require("prompt-sync")();
 
 var calculator = true;
+var theFirstNumber = false;
+var answer = 0;
+var answertext = "";
+var lastSign = "";
+
+while (calculator) {
+    var nurmberOrSign = prompt("Your number or sign: ");
+    if (!isNaN(nurmberOrSign)) {
+        nurmberOrSign = Number(nurmberOrSign);
+    }
+    answertext += nurmberOrSign;
+
+    if (theFirstNumber == false) {
+        answer = nurmberOrSign;
+        theFirstNumber = true;
+        continue;
+    }
+    if (nurmberOrSign === "stop") {
+        calculator = false;
+        continue;
+    }
+
+    if (nurmberOrSign === "+" || nurmberOrSign === "-" || nurmberOrSign === "*" || nurmberOrSign === "/") {
+        lastSign = nurmberOrSign; 
+    } else if (!isNaN(nurmberOrSign)) {
+        if (lastSign === "+") {
+            answer = answer + nurmberOrSign;
+        } else if (lastSign === "-") {
+            answer = answer - nurmberOrSign;
+        } else if (lastSign === "*") {
+            answer = answer * nurmberOrSign;
+        } else if (lastSign === "/") {
+            answer = answer / nurmberOrSign;
+        } 
+    } else if (nurmberOrSign === "=") { 
+        calculator = false;
+    }
+}
+
+console.log(answertext + answer);
+
+/*var calculator = true;
 var hasEntertNumber = false;
 var answer = "";
 var result = 0;
@@ -45,11 +87,11 @@ while (calculator) {
         
     } else if (yourSign === "=") { 
         answer += yourNumber;
-        console.log(answer + "= " + result);  /* + result*/
+        console.log(answer + "= " + result);
         calculator = false;
     } else {
         console.log("There is not any sign!");
     }
 
 
-}
+}*/
