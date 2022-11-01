@@ -5,7 +5,7 @@ var theFirstNumber = false;
 var answer = 0;
 var answertext = "";
 var lastSign = "";
-
+//var operations = ["+", "-", "*", "/"];
 while (calculator) {
     var nurmberOrSign = prompt("Your number or sign: ");
     if (!isNaN(nurmberOrSign)) {
@@ -22,7 +22,7 @@ while (calculator) {
         calculator = false;
         continue;
     }
-
+    // if(operations.includes(numberOrSign)) {...}
     if (nurmberOrSign === "+" || nurmberOrSign === "-" || nurmberOrSign === "*" || nurmberOrSign === "/") {
         lastSign = nurmberOrSign; 
     } else if (!isNaN(nurmberOrSign)) {
