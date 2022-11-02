@@ -2,17 +2,17 @@ var prompt = require("prompt-sync")();
 
 var fullPrice = 0;
 
-var bug = 2;
-var fly = 1;
-var ladyBug = 4;
-var spider = 0.5;
-var mosquito = 14;
-var flea = 6;
+var bug = 2;//zuk
+var fly = 1;//muha
+var ladyBug = 4;//korowka bozja
+var spider = 0.5;//pauk
+var mosquito = 14;//komar
+var flea = 6;//bloha
 
 var menuPrices = [bug, fly, ladyBug, spider, flea, mosquito];
 var menuTexts = ["bug", "fly", "ladyBug", "spider", "flea", "mosquito"];
 var shoppingList = [];
-shoppingList.push[userInput];
+
 var i = 0;
 while (i < menuPrices.length) {
     console.log(menuTexts[i], menuPrices[i]);
@@ -21,8 +21,28 @@ while (i < menuPrices.length) {
 
 var wantToBuy = true;
 while (wantToBuy) {
-    var userInput = prompt("");
+    var userInput = prompt("What do you want?: ");
+    console.log(userInput);
+    if (userInput === "stop") {
+        wantToBuy = false;
+        continue;
+    }
+    shoppingList.push[userInput];
 }
+
+i = 0;
+while (i < shoppingList.length) {
+  var item = shoppingList[i];
+  if (menuTexts.includes(item)) {
+    var index = menuTexts.indexOf(item);
+    if (index >= 0) {
+      fullPrice += menuPrices[index];
+    }
+  }
+  i++;
+}
+console.log("You need to pay " + fullPrice);
+
 
 /* 
 var isShopping = true;
@@ -44,3 +64,4 @@ while (i < shoppingList.length) {
     console.log(shoppingList[i]);
     i++;
 }
+*/
