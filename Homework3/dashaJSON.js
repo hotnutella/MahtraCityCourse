@@ -31,7 +31,37 @@ var menu = [
 var shoppingList = [];
 
 var i = 0;
-while (i < menu.price.length) {
-    console.log(menu.name[i], menu.price[i]);
+while (i < menu.length) {
+    menu[i].price
+    console.log(menu[i].name, menu[i].price);
     i++;
 }
+
+var wantToBuy = true;
+while (wantToBuy) {
+    var userInput = prompt('What do you want?: ');
+    console.log(userInput);
+
+    if (userInput === 'stop') {
+        wantToBuy = false;
+        continue;
+    } 
+
+    shoppingList.push(userInput);
+
+}
+console.log(shoppingList)
+
+i = 0;
+while (i < shoppingList.length) {
+    var j = 0;
+    while(j < menu.length) {
+        if (shoppingList[i] == menu[j].name) {
+            fullPrice += menu[j].price;
+        }
+        j++;
+    }
+    i++;
+}
+
+console.log('You need to pay ' + fullPrice); 
