@@ -1,12 +1,5 @@
  var people = [
-  {
-    name: 'Arvid',
-    mushrooms: ['sodgid']
-  },
-  {
-    name: 'Diana',
-    mushrooms: []
-  }
+  
  ]
 
  var name = prompt('Your name');
