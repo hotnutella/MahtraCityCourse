@@ -3,15 +3,15 @@ var prompt = require('prompt-sync')();
 var ourFamily = [
     {
         name: 'Tyrion',
-        mushrooms: [],
+        mushrooms: ['chanterelle',],
     },
     {
         name: 'LyaLya',
-        mushrooms: [],
+        mushrooms: ['saffron',],
     },
     {
         name: 'Deniss',
-        mushrooms: [],
+        mushrooms: ['amanita',],
     },
     {
         name: 'Dasha',
@@ -28,7 +28,7 @@ while (chooseMushrooms) {
     if (name === 'stop') {
         chooseMushrooms = false;
         continue;
-    };
+    }
     var mushroom = prompt('Mushroom name: ');
     
     for (var creature of ourFamily) {
@@ -36,8 +36,7 @@ while (chooseMushrooms) {
             creature.mushrooms.push(mushroom);
         }
     }
-    
-};
+}
 
 var basket = true;
 while (basket) {
@@ -48,8 +47,8 @@ while (basket) {
         } else if (whoseBasket === 'stop') {
             basket = false;
             continue;
-        };
-    };
-};
+        }
+    }
+}
 
 //   \' || \" || ili ljuboi drugoi showii single ==>>> ekranirovanie = escape (dlja apostrofa) :))
