@@ -38,7 +38,7 @@ while (chooseMushrooms) {
     }
     
 };
-// ---------------
+
 var basket = true;
 while (basket) {
     var whoseBasket = prompt('Whose basket you wanna see?: ');
