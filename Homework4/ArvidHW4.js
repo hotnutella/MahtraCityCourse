@@ -1,4 +1,3 @@
-
 var prompt = require ("prompt-sync")();
 //var sellPrice = 0;
 /*var prices = [
@@ -41,7 +40,7 @@ while (newName) {
        newName = false;
        continue;
     }
-    //chosen.push(name);
+    
     
 
 var newMushroom = true;
@@ -49,7 +48,6 @@ while (newMushroom) {
     var mushroom = prompt("Which mushroom do you choose? ")
     mushroom = String(mushroom);
     if (mushroom === "stop") {
-        //chosen.pop(name);
         newMushroom = false;
         continue;
     } 
@@ -59,8 +57,6 @@ while (newMushroom) {
             sellPrice += prices[k].price;
         }
     }*/
-    //for (i = 0; i < chosen.length; i++) {
-        //var currentName = chosen[i];
         for (j = 0; j < people.length; j++) {
             var currentName = people[j].name;
             if (name === currentName) {
@@ -69,7 +65,6 @@ while (newMushroom) {
         }
     }
 }
-//}
 var listOfMushrooms = true;
 while (listOfMushrooms) {
     var listName = prompt("Which persons mushrooms do you want to see? ")
