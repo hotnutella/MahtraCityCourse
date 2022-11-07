@@ -1,7 +1,7 @@
 
 var prompt = require ("prompt-sync")();
-var sellPrice = 0;
-var prices = [
+//var sellPrice = 0;
+/*var prices = [
     {
         name: "Podosinovik",
         price: 3,
@@ -14,7 +14,7 @@ var prices = [
         name: "belqi",
         price: 6,
     }
-];
+];*/
 //var chosen = [];
 var people = [
     {
