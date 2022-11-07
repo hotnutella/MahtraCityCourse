@@ -21,36 +21,35 @@ var ourFamily = [
 
 var allMushrooms = ['boletus', 'saffron', 'chanterelle', 'cep', 'russula', 'champignon', 'amanita',];
 
-var mushroomToTheCreature = [];
-
+var name;
 var chooseMushrooms = true;
 while (chooseMushrooms) {
-    var name = prompt('Your name: ');
-    var mushroom = prompt('Mushroom name: ');
+    name = prompt('Your name: ');
     if (name === 'stop') {
         chooseMushrooms = false;
         continue;
     };
-    mushroomToTheCreature.push(mushroom);
-};
-
-console.log(mushroomToTheCreature);
-
-or (var i = 0; i < mushroomToTheCreature.length; i++) {
-    var basket = ourFamily[i].mushrooms;
-
-    //for (var j = 0; j < allMushrooms.length; j++) {
-
-        for (var r = 0; r < ourFamily.length; r++) {
-            var whoIsIt = ourFamily[r].name;
-            if () {
-                basket += mushroom;
-            };
-            
-        };
-
-   // };
+    var mushroom = prompt('Mushroom name: ');
+    
+    for (var creature of ourFamily) {
+        if (name === creature.name && allMushrooms.includes(mushroom)) {
+            creature.mushrooms.push(mushroom);
+        }
+    }
     
 };
+// ---------------
+var basket = true;
+while (basket) {
+    var whoseBasket = prompt('Whose basket you wanna see?: ');
+    for (var creature of ourFamily) {
+        if (whoseBasket === creature.name) {
+            console.log(whoseBasket + ' has such mushrooms in the basket: ' + creature.mushrooms);
+        } else if (whoseBasket === 'stop') {
+            basket = false;
+            continue;
+        };
+    };
+};
 
-console.log(whoIsIt + ' has such mushrooms in a basket: ' + basket);
+//   \' || \" || ili ljuboi drugoi showii single ==>>> ekranirovanie = escape (dlja apostrofa) :))
