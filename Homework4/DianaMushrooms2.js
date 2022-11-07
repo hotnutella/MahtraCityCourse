@@ -2,20 +2,20 @@ var prompt = require('prompt-sync')();
 
 var peoples = [
     {
-        name: 'Арвидас',
+        name: 'Arvidas',
         mushrooms: [],
     },
     {
-        name: 'Диана',
+        name: 'Diana',
         mushrooms: [],
     },
     {
-        name: 'Даша',
+        name: 'Dasha',
         mushrooms: [],
     
     },
     {
-        name: 'Денис',
+        name: 'Deniss',
         mushrooms: [],
     },
 ];
@@ -24,7 +24,7 @@ var newPeople = true;
 
 while(newPeople) {
     var peopleAnswer = prompt('Назови свое имя: ');
-    if (peopleAnswer === 'стоп') {
+    if (peopleAnswer === 'stop') {
         newPeople = false;
         continue;
     };
@@ -34,7 +34,7 @@ while(newPeople) {
     while (newMushroom) {
         var mushroom = prompt('Какие грибы ты собрал? ');
         mushroom = String(mushroom);
-        if (mushroom === 'стоп') {
+        if (mushroom === 'stop') {
             newMushroom = false;
             continue;
         };
@@ -56,10 +56,10 @@ while (mushroomList) {
             console.log(peoples[i].name + ': ' + peoples[i].mushrooms);
         };
     };
-    if (showMushroomsOfThisPerson === 'стоп') {
+    if (showMushroomsOfThisPerson === 'stop') {
         mushroomList = false;
         break;
     };
 };
 
-console.log('Всего хорошего!')
+console.log('Всего хорошего!');
