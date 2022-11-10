@@ -46,7 +46,6 @@ while (basket) {
             console.log(whoseBasket + ' has such mushrooms in the basket: ' + creature.mushrooms);
         } else if (whoseBasket === 'stop') {
             basket = false;
-            continue;
         }
     }
 }
