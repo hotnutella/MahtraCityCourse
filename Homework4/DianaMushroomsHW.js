@@ -12,7 +12,6 @@ var peoples = [
     {
         name: 'Dasha',
         mushrooms: [],
-    
     },
     {
         name: 'Deniss',
