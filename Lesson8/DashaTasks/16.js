@@ -1,12 +1,17 @@
 var n = 1000;
-var i = 2;
-
+var num = 0;
 division = true;
 while (division) {
-    n / i == a;
-    
-    if (a < 50) {
+    n = n / 2; 
+    if (n < 50) {
         division = false;
     } 
+    num++;
+
 }
-console.log(a)
+    console.log(n + ' and num = ' + num);
+// to we samoe
+/* while (n >= 50) {
+    n = n / 2;
+    num++;
+} */
