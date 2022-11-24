@@ -9,6 +9,8 @@ var currentOperation;
 var lastOperation = '';
 var result;
 
+// TODO move as much as possible to the calculator module
+
 while(keepAsking) {
   var userInput = prompt('Input: ');
   fullAnswer += userInput;
