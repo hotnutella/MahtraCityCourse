@@ -1,7 +1,7 @@
 var prompt = require('prompt-sync')();
 
 var rows = [
-    row1 = [ 
+    [ 
         {
             id: 1,
             value: ' ',
@@ -15,7 +15,7 @@ var rows = [
             value: ' ',
         },
     ],
-    row2 = [
+    [
         {
             id: 4,
             value: ' ',
@@ -29,7 +29,7 @@ var rows = [
             value: ' ',
         },
     ],
-    row3 = [
+    [
         {
             id: 7,
             value: ' ',
@@ -45,9 +45,15 @@ var rows = [
     ],
 ];
 
-var i = 0;
-for (i; i < 3; i++) { 
-    a = rows[i];
-    console.log(a[0].value + '|' + a[1].value + '|' + a[2].value);
+
+for (i = 0; i < rows.length; i++) { 
+    var row = rows[i];
+    var visibleSlots = [];
+    for (j = 0; j < row.length; j++) {
+        var slot = row[j];
+        visibleSlots.push(slot.id);   
+    }
+    var visibleRow = visibleSlots.join('|')
+    console.log(visibleRow);
 }
 
