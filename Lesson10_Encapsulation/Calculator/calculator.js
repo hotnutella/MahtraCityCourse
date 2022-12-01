@@ -93,5 +93,7 @@ function shouldStopProgram(userInput) {
 export default {
   askUserInput, isFirstNumber, saveLastOperation, 
   makeCalculation, shouldStopProgram, addToFullAnswer, 
-  getResult, getFullAnswer
+  getResult, getFullAnswer,
+  getOperationFunctions,
+  getCurrenteOperation
 }
