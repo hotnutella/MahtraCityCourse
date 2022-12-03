@@ -29,14 +29,20 @@ var menu = [
     },
 ]
 var shoppinglist = [];
-
-function addToCart () {
-    var yourChoice = prompt("What do you want?: ");
+function stopProgram (yourChoice) {
     if (yourChoice == 'nothing') {
         wantTobuy = false;
-    } else {
+    }
+}
+function addToCart (yourChoice) {
+    if (yourChoice !== 'nothing') {
         shoppinglist.push(yourChoice);
     }
+}
+function handleInput () {
+    var yourChoice = prompt("What do you want?: ");
+    stopProgram(yourChoice);
+    addToCart(yourChoice);
 }
 function cartCheck () {
     var fullPrice = 0; 
@@ -54,7 +60,7 @@ for (var product of menu) {
     console.log(product);
 }
 while (wantTobuy) {
-    addToCart();
+    handleInput();
 }
 cartCheck();
 
