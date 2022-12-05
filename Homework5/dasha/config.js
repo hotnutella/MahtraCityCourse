@@ -2,12 +2,12 @@
 // Players
 var players = [
     {
-        player1: 'X',
-        p1Ids: [],
+        player: 'X',
+        IDs: [],
     },
     {
-        player2: 'O',
-        p2Ids: [],
+        player: 'O',
+        IDs: [],
     }
 ];
 //Game board initialization
