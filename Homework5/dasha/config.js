@@ -1,4 +1,15 @@
 
+// Players
+var players = [
+    {
+        player1: 'X',
+        p1Ids: [],
+    },
+    {
+        player2: 'O',
+        p2Ids: [],
+    }
+];
 //Game board initialization
 var rows = [
     [
@@ -57,5 +68,5 @@ var winningCombinations = [
 ];
 
 export default {
-    rows, winningCombinations,
+    rows, winningCombinations, players
 }
