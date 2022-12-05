@@ -68,17 +68,17 @@ while (GameOn) {
         for (var slot of row) {
             if (userInput === slot.id) {
                 if (i === 1 || i === 3 || i === 5 || i === 7 || i === 9) {
-                    if (slot.value === " ") {
+                    
                         slot.value = X;
                         player1Numbers.push(slot.id);
                         visibleRow.push(slot.value);
-                    }
+                    
                 } else if (i === 2 || i === 4 || i === 6 || i === 8){
-                    if (slot.value === " ") {
+                 
                         slot.value = O;
                         player2Numbers.push(slot.id);
                         visibleRow.push(slot.value);
-                    }
+                    
                 }
             } else {
             visibleRow.push(slot.value);}
