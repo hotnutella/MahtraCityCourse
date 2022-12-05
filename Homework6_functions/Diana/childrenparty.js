@@ -1,63 +1,65 @@
 import PromptSync from 'prompt-sync';
 var prompt = PromptSync();
 
-console.log(greeting);
+function answerYes (greeting) {
+    var over11 = fullPrice();
+    var under11 = freeTikets();
 
-function greeting (){
-   var Hello = prompt('Добро пожаловать на вечeринку! Входной билет для детей до 11 лет - бесплатный, старше 11 лет - 10.90 eur. Скидка при покупке 5+ билетов = 30%! Хотите ли вы купить билеты? Да/Нет ');
-   if (Hello === 'Да') {
-    answerYes(Hello);
-   } else if (Hello === 'Нет') {
-    answerNo(Hello);
-   } else {
-    wrongAnswer(Hello);
-   }
-   return Hello;
-} 
-
-function answerYes (greeting){
-    freeTikets ()
+    summa(over11, under11);
 }
 
-function answerNo (greeting){
+function answerNo (greeting) {
     console.log('Надеюсь, что вы посетите нас позже. Всего хорошего!');
 }
 
-function wrongAnswer (){
+function wrongAnswer () {
     console.log('Ответ не распознан!');
 }
 
-function freeTikets (){
+function freeTikets () {
     var freeTikets = prompt('Сколько в вашей группе детей до 11 лет? : ');
     freeTikets = Number(freeTikets);
     return freeTikets;
 }
 
-function fullPrice (){
+function fullPrice () {
     var Tikets = prompt('Сколько в вашей группе детей старше 11 лет? : ');
     Tikets = Number(Tikets);
     return Tikets;
 }
 
-function summa (){
+function summa (fullTickets = 0, freeTikets = 0) {
     var fullPrice = 10.90;
     var free = 0;
-    var summa = (fullPrice * Tikets + free * freeTikets);
+    var summa = (fullPrice * fullTickets + free * freeTikets);
 
-    if (freeTikets+Tikets >= 5){
+    if (freeTikets + fullTickets >= 5){
         var allTikets = summa * 0.7;
+        sale(allTikets);
     } else {
         var allTikets = summa;
+        end(allTikets);
     }
-    return allTikets;
 }
 
-function sale (summa){
-    console.log('Поздравляю, ваша сумма со скидкой: ' + allTikets + ' Приходите к нам еще! ');
+function sale (summa) {
+    console.log('Поздравляю, ваша сумма со скидкой: ' + summa + ' Приходите к нам еще! ');
 }
 
-function end (summa){
+function end (summa) {
     console.log('С вас: ' + summa + ' До новых встреч! ');
+}
+
+// -------------------------------------------
+
+var q = prompt('Добро пожаловать на вечeринку! Входной билет для детей до 11 лет - бесплатный, старше 11 лет - 10.90 eur. Скидка при покупке 5+ билетов = 30%! Хотите ли вы купить билеты? Да/Нет ');
+
+if (q === 'Yes') {
+    answerYes(q);
+} else if (q === 'No') {
+    answerNo(q);
+} else {
+    wrongAnswer(q);
 }
 
 /*
@@ -82,4 +84,4 @@ if( Hello === 'Да'){
     console.log('Надеюсь, что вы посетите нас позже. Всего хорошего!');
 } else {
     console.log('Ответ не распознан!');
-}
+}'*/
