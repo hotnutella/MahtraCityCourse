@@ -15,14 +15,19 @@ function slots () {
     }
 }
 function currentPlayer () {
-    for (var person of config.players) {
-        var personFromPlayers = config.players.filter(function (person) {
-            return person.player === person.IDs;
+    var personIDs = config.players.map(function(person) {
+        var selectedPerson = players.filter(function(personIDs) {
+            return personIDs === 
         })
-        .shift();
-        console.log(personFromPlayers)
+    })
+    // for (var person of config.players) {
+    //     var personFromPlayers = config.players.filter(function (person) {
+    //         return person.player === person.IDs;
+    //     })
+    //     .shift();
+    //     console.log(personFromPlayers)
 
-    }
+    // }
 
 }
 function currentSlot () {
@@ -33,7 +38,7 @@ function currentSlot () {
         .shift();
         console.log(slotFromRows)
         config.rows.slot.value.push(config.players.person.IDs);
-        console.log(visibleRow +)
+        //console.log(visibleRow +)
         currentPlayer()
     }
 }
