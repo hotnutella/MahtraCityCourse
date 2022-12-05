@@ -19,8 +19,21 @@ var balls = [
   'red',
 ];
 
-function howMany() {
-  
+function howMany(color) {
+  var colorBalls = balls.filter(function(ball) {
+    return ball === color;
+  });
+  return colorBalls.length;
+  /*
+  var count = 0;
+  for (var ball of balls) {
+    if (ball === color) {
+      count++;
+    }
+  }
+  return count;
+  */
 }
 
-howMany('green');
+var quantity = howMany('green');
+console.log(quantity);
