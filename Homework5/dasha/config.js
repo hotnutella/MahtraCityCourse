@@ -1,12 +1,12 @@
 
-// Players
+// players
 var players = [
     {
-        player: 'X',
+        name: 'X',
         IDs: [],
     },
     {
-        player: 'O',
+        name: 'O',
         IDs: [],
     }
 ];
