@@ -1,24 +1,24 @@
-const ingridients = [];
+const ingredients = [];
 
-export const addIngridient = (name) => {
-  ingridients.push(name);
+export const addIngredient = (name) => {
+  ingredients.push(name);
 }
 
-export const removeIngridient = (name) => {
-  if (!ingridients.includes(name)) {
+export const removeIngredient = (name) => {
+  if (!ingredients.includes(name)) {
     return;
   } 
-  const index = ingridients.indexOf(name);
-  ingridients.splice(index, 1);
+  const index = ingredients.indexOf(name);
+  ingredients.splice(index, 1);
 }
 
-export const getIngridients = () => {
-  return ingridients;
+export const getIngredients = () => {
+  return ingredients;
 }
 
 export const addTestData = () => {
-  addIngridient('Bacon');
-  addIngridient('Egg');
-  addIngridient('Oil');
-  addIngridient('Milk');
+  addIngredient('Bacon');
+  addIngredient('Egg');
+  addIngredient('Oil');
+  addIngredient('Milk');
 }

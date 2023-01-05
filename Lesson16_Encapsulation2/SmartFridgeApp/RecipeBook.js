@@ -1,36 +1,36 @@
-const recipes = [
-  {
-    recipeId: 1,
-    name: 'FriedBacon',
-    ingridients: ['Oil', 'Bacon']
-  },
-  {
-    recipeId: 2,
-    name: 'Omelette',
-    ingridients: ['Oil', 'Eggs', 'Milk']
+const recipes = [];
+
+export const addRecipe = (name, ingredients) => {
+  const recipe = { recipeId: recipes.length + 1, name, ingredients };
+  recipes.push(recipe);
+}
+
+export const removeRecipe = (name) => {
+  const index = recipes.findIndex(recipe => recipe.name === name);
+  recipes.splice(index, 1);
+}
+
+export const showRecipeList = () => {
+  console.log('You have these recipes in your book: ');
+  for (const recipe of recipes) {
+    console.log(recipe.recipeId + ' ' + recipe.name);
   }
-];
-
-export const addRecipe = () => {
-  // not implemented 
 }
 
-export const removeRecipe = () => {
-  // not implemented 
-}
-
-export const getRecipeByName = (name) => {
+export const getIngredientsByRecipeName = (name) => {
   return recipes.find(recipe => recipe.name === name);
 }
 
-export const getRecipesByIngridients = (ingridientNames) => {
+export const getRecipesByIngredients = (ingredientNames) => {
   return recipes.filter(recipe => {
-    let suitable = true;
-    // TODO why Milk makes Omelette
-    for (const name of ingridientNames) {
-      suitable = suitable && recipe.ingridients.includes(name);
-      console.log(suitable);
+    const checkedIngredients = [];
+    let matchingIngredientCount = 0;    
+    for (const name of ingredientNames) {
+      if (recipe.ingredients.includes(name) && !checkedIngredients.includes(name)) {
+        matchingIngredientCount++;
+      }
+      checkedIngredients.push(name);
     }
-    return suitable;
+    return matchingIngredientCount === recipe.ingredients.length;
   });
 }
