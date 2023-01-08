@@ -1,4 +1,4 @@
-const invoices = (id, amount) => []
+const Invoices = (id, amount) => []
 
 CleanParkingLot();
 AskPrice();
