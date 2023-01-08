@@ -1,10 +1,8 @@
 function fibonacci (n) {
-    if (result <= 0) {
-      return 0;
+    if (n < 2) {
+      return n;
     }
-
-    var result = fibonacci(2 * n - 3);
-    return result;
+    return fibonacci(n - 1) + fibonacci(n - 2);
   }
 
-  console.log(fibonacci (1));
+  console.log(fibonacci (3));
