@@ -1,23 +1,21 @@
+// const typesOfLoans = [
+//     {
+//         id: 1,
+//         loan: 'mortgage',
+//         interest: 4,
+//     },
+//     {
+//         id: 2,
+//         loan: 'credit',
+//         interest: 0.15,
+//     },
+//     {
+//         id: 3,
+//         loan: 'car',
+//         interest: 2,
+//     },
 
-const typesOfLoans = [
-    {
-        id: 1,
-        loan: 'mortgage',
-        interest: 4,
-    },
-    {
-        id: 2,
-        loan: 'credit',
-        interest: 0.15,
-    },
-    {
-        id: 3,
-        loan: 'car',
-        interest: 2,
-    },
-
-]
-
+// ]
 
 
 const clients = [
@@ -42,5 +40,5 @@ const clients = [
 ]
 
 export default {
-    clients, typesOfLoans,
+    clients, 
 }
