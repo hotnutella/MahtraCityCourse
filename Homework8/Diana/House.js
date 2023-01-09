@@ -1,5 +1,5 @@
-const Invoices = (id, amount) => []
+const invoices = (id, amount) => []
 
-CleanParkingLot();
-AskPrice();
-EmptyGarbageHouse();
+cleanParkingLot();
+askPrice();
+emptyGarbageHouse();
