@@ -1,30 +1,30 @@
-const Services = [
+const services = [
     {
         id: 1, 
-        name: ParkingLotCleaning,
+        name: "ParkingLotCleaning",
         price: 50,
     },
     {
         id: 2, 
-        name: HouseAreaCleaning,
+        name: "HouseAreaCleaning",
         price: 550,
     },
     {
         id: 3, 
-        name: EntrancesCleaning,
+        name: "EntrancesCleaning",
         price: 350,
     },
     {
         id: 4, 
-        name: WindowCleaning,
+        name: "WindowCleaning",
         price: 600,
     },
     {
         id: 5, 
-        name: GarbageRemoval,
-        price: 400,
+        name: "GarbageRemoval",
+        price: 475,
     },
 ];
 
-CleanParkingLot();
-EmptyGarbageHouse();
+cleanParkingLot();
+emptyGarbageHouse();
